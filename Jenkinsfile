@@ -11,7 +11,7 @@ pipeline {
 
         stage('Test') {
           steps {
-            echo 'Testing'
+            echo '"Testing Chrome $[ChromeDriverPath]"'
           }
         }
 
@@ -24,5 +24,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChromeDriverPath = 'C:\\Driver\\Chrome'
   }
 }
